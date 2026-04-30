@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMM12 | Aesthetic Stream</title>
+    <!-- Plyr CSS -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <style>
+        body { 
+            background: #0f0f0f; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            font-family: 'Inter', sans-serif; 
+        }
+        .container { 
+            width: 90%; 
+            max-width: 1000px; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5); 
+        }
+        :root { --plyr-color-main: #ff0055; }
+
+        /* Modern subtitle design */
+        ::cue {
+            background: rgba(0, 0, 0, 0.75);
+            color: #ffffff;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <video id="player" playsinline controls crossorigin="anonymous" data-poster="https://www.ondemandkorea.com/images/odk_logo_fb.png"></video>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+
+<script>
+    // ==========================================
+    // 1. PASTE YOUR VTT CONTENT BELOW
+    // ==========================================
+    const mySubtitles = `WEBVTT
+
+00:56.000 --> 00:58.000
+A completely new era of hip-hop begins.
+
+01:05.000 --> 01:07.000
+Show Me The Money 12
+
+01:18.000 --> 01:20.000
+— the long-awaited final.
+
+01:23.000 --> 01:24.000
+It begins now.
+
+02:52.000 --> 02:58.000
+For the first time, participants from diverse cultural backgrounds have gathered in
+Korea,
+
+02:58.000 --> 03:01.000
+so it already feels like we’re watching the finale.
+
+03:12.000 --> 03:14.000
+Out of all contestants, 152 survived the first cut…
+
+03:19.000 --> 03:21.000
+…and that number was reduced to 73.
+
+03:28.000 --> 03:30.000
+The hellish audition rounds.
+
+03:51.000 --> 03:53.000
+Only the final three remain.​
+
+03:54.000 --> 03:56.000
+We will now begin the team matching mission.
+
+03:56.000 --> 03:57.000
+Starting now.
+
+04:08.000 --> 04:09.000
+This is the Team Diss Mission.
+
+04:09.000 --> 04:13.000
+You’re worried about what I’m going to say, right?​
+
+04:18.000 --> 04:23.000
+No matter what you do, you can’t beat me.
+
+04:23.000 --> 04:26.000
+Show Me The Money 12 — Semi-final
+
+04:36.000 --> 04:38.000
+On this stage, you’re the student and I’m the teacher.​
+
+04:39.000 --> 04:44.000
+There’s a reason I’m standing here.
+
+04:44.000 --> 04:46.000
+From the five, only one will be chosen.
+
+05:02.000 --> 05:06.000
+The finalists are:
+
+05:06.000 --> 05:11.000
+Milly, Mason Home, Nowimyoung, Tray B,​
+and Kim Haon.
+
+05:11.000 --> 05:13.000
+As the final piece, the only thing I need is victory.
+
+05:39.000 --> 05:42.000
+I believe desperation gets recognized.
+
+05:45.000 --> 06:07.000
+I think that desperation will lead me to victory.
+
+06:07.000 --> 07:07.000
+–7:11 (rap)​
+My energy ignites, the words come rushing in​
+This is for life​
+I don’t know what I’ll become​
+But it’s the only reason I do this​
+Love… I just run
+
+07:20.000 --> 07:48.000
+I don’t compare myself to anyone.
+
+07:48.000 --> 07:55.000
+First place was always mine.
+
+07:55.000 --> 08:25.000
+I’ll prove through my skills that I deserve number one.
+
+08:25.000 --> 08:30.000
+Just watching you, I can tell—​
+none of you are a real threat.
+
+08:30.000 --> 08:40.000
+There’s no way I'll lose to you.
+
+08:40.000 --> 08:53.000
+Hello, I’m Lulure.​
+Today, I’ll make sure you remember my name.
+
+08:53.000 --> 08:56.000
+I’ll show you what real style is.
+
+08:56.000 --> 09:02.000
+I’ve already proven my growth.
+
+09:02.000 --> 09:12.000
+Since this is a once-in-a-lifetime stage,​
+I’ll prove it with a win.
+
+09:12.000 --> 09:18.000
+–9:31 (rap)​
+Hey, hey, hey​
+I don’t follow plans, I make my own​
+
+09:18.000 --> 09:24.000
+If it’s about copying lines, I go crazy and flip it​
+
+09:25.000 --> 09:30.000
+Fan by fan, call it marketing if you want
+
+09:32.000 --> 09:37.000
+​You just cover things up with money like loose change
+
+09:37.000 --> 09:50.000
+Success means nothing—​
+if you can’t even respect yourself.
+
+09:50.000 --> 10:06.000
+Out of everyone here,​
+I believe I’m the most deserving of that spot.
+
+10:06.000 --> 10:12.000
+Once you see my stage,
+
+10:12.000 --> 10:19.000
+you’ll know who the winner is.
+
+10:19.000 --> 11:19.000
+–10:48 (rap)​
+Skill is everything—my life moves straight forward​
+
+11:19.020 --> 11:19.180
+I don’t need to force momentum​
+
+11:19.200 --> 11:20.200
+Who are you? Chasing clout and subscribers ​Competition?
+
+11:20.400 --> 11:21.400
+I deal with that easily​
+
+11:21.600 --> 11:42.600
+Even if you try, you can’t match me​
+
+11:42.800 --> 11:49.800
+When I step up, you should be worried​You all look clueless
+
+11:51.000 --> 11:58.000
+The final journey toward becoming hip-hop’s new icon.
+
+11:58.000 --> 12:21.000
+From 36,000 contestants,​
+only one winner will stand at the end of Show Me The Money.
+
+12:21.000 --> 13:21.000
+The final rap battle will begin shortly.
+
+13:21.000 --> 13:36.000
+A new icon of the hip-hop scene will be born.​
+Show Me The Money.
+
+13:36.000 --> 13:49.000
+Hello, I’m MC Kim Jin-pyo.​
+Welcome to the live broadcast of the Show Me The Money 12 Final.
+
+13:49.000 --> 14:01.000
+Returning after four years,​
+Show Me The Money 12 created massive buzz​
+and marked a spectacular comeback with brand-new stages.
+
+14:01.000 --> 14:07.000
+After going through the most intense missions of any season,
+
+14:07.000 --> 14:13.000
+only the top rappers have survived until today.
+
+14:13.000 --> 14:24.000
+From them, only one—
+
+14:24.000 --> 14:32.000
+—will win the grand prize of 100 million won.
+
+14:32.000 --> 14:39.000
+Which rapper will become the final winner?​
+That winner will be revealed very soon.
+
+14:39.000 --> 14:52.000
+That’s right. Now, let’s meet the finalists competing for the win.
+
+14:52.000 --> 15:09.000
+This season of Show Me The Money 12 marks the first time since Season 4​
+that all four producer teams have made it to the final.
+
+15:09.000 --> 15:14.000
+It really shows the strong synergy between skilled rappers​
+and the experienced producers leading their teams.
+
+15:14.000 --> 15:20.000
+Which team are you rooting for right now?
+
+15:20.000 --> 15:32.000
+Then now, let’s meet the producers and the five rappers​
+who will be lighting up this grand finale stage.
+
+15:32.000 --> 15:39.000
+We’ll introduce them one by one.
+
+15:39.000 --> 16:01.000
+Here is the first finalist for the championship.
+
+16:01.000 --> 16:07.000
+Hello, I’m Mason Home from Team Okasian.
+
+16:07.000 --> 16:12.000
+I think the Okasian team really stood out this season.
+
+16:12.000 --> 16:14.000
+Thank you.
+
+16:14.000 --> 16:18.000
+Eliminated contestant: Mason Home.
+
+16:18.000 --> 16:25.000
+But I’m someone who crawled back from hell.
+
+16:25.000 --> 16:49.000
+I’m Mason Home, a survivor of the battlefield.​
+I’ll show you how someone who’s already “died once”​
+can rise all the way to victory.
+
+16:49.000 --> 17:05.000
+Mason Home of Team Gray & Loco,​
+proving the synergy between a former winner and a kingmaker.
+
+17:05.000 --> 17:17.000
+Everyone, your first finalist — Mason of Team Gray & Loco!
+
+17:17.000 --> 17:22.000
+Producers Gray and Loco,​
+today is finally the day a winner will be decided.
+
+17:22.000 --> 17:28.000
+Since all four teams made it to the final,​
+we’re expecting an intense competition.
+
+17:28.000 --> 17:38.000
+Tell us how you feel going into today’s final,​
+and brag a bit about your team member Mason.
+
+17:38.000 --> 17:46.000
+(Gray)​
+Well… as you can see, Mason is very handsome.
+
+17:46.000 --> 17:49.000
+That’s important, of course.
+
+17:49.000 --> 17:55.000
+(Loco)​
+Mason proves himself on every stage​
+and creates his own story each time.
+
+17:55.000 --> 17:59.000
+We’ve prepared something special for today,​
+so since it’s the final—
+
+17:59.000 --> 18:01.000
+—we’re going for the win.
+
+18:01.000 --> 18:04.000
+We’ll give it everything.
+
+18:04.000 --> 18:08.000
+Alright, we’re looking forward to it.
+
+18:08.000 --> 18:13.000
+That was Mason of Team Gray & Loco, our first finalist.
+
+18:13.000 --> 18:18.000
+Please give him a big round of applause!
+
+18:18.000 --> 18:30.000
+Mason! Mason!
+
+18:30.000 --> 19:10.000
+Next, the second finalist.
+
+19:10.000 --> 19:30.000
+(rap snippet)​
+I’ll wipe everything out in the end.
+
+19:30.000 --> 19:49.000
+The team that sent two rappers to the final—​
+Milli!
+
+19:49.000 --> 19:58.000
+Your second finalist.
+
+19:58.000 --> 20:03.000
+Now, Gray and Loco—​
+we can’t skip bragging about Milli either.
+
+20:03.000 --> 20:07.000
+(Gray)​
+As you can see, Milli is cute.
+
+20:07.000 --> 20:11.000
+Very important.
+
+20:11.000 --> 20:17.000
+(Loco)​
+Milli is an incredible performer.​
+A truly outstanding artist.
+
+20:17.000 --> 20:22.000
+You can really look forward to today’s stage.
+
+20:22.000 --> 20:24.000
+Let’s go for the win.
+
+20:24.000 --> 20:29.000
+Contestant number 2, Milli!
+
+20:29.000 --> 20:48.000
+Let’s cheer for a great result today.
+–20:38​
+That was Milli of Team Gray & Loco, our second finalist.
+
+20:48.000 --> 20:58.000
+Now, the third finalist.
+
+20:58.000 --> 21:02.000
+Hello, I’m Tray B.
+
+21:02.000 --> 21:18.000
+I came here because I believe I’m ready.
+
+21:18.000 --> 21:22.000
+He’s incredibly consistent—he performs well every time.
+
+21:22.000 --> 21:28.000
+Through this show,​
+I think I’ve shown my songwriting skills​
+and my unique voice really well.
+
+21:28.000 --> 21:32.000
+From the beginning, my goal was the final—​
+and the win.
+
+21:32.000 --> 21:45.000
+Now there’s only one step left, so let’s do this.
+
+21:45.000 --> 21:57.000
+With powerful individuality and energy,​
+dominating the stage—
+
+21:57.000 --> 22:12.000
+Your third finalist: Tray B of Team Jay Park & LIl Moshpit.
+
+22:12.000 --> 22:17.000
+Even his entrance feels different.
+
+22:17.000 --> 22:22.000
+Producers Jay Park and LIl Moshpit,​
+you’ve made it to the final.
+
+22:22.000 --> 22:24.000
+Tell us your thoughts and brag about Tray B.
+
+22:24.000 --> 22:30.000
+(Jay Park)​
+Tray B is incredibly consistent—​
+he always delivers solid, cool performances.
+
+22:30.000 --> 22:32.000
+And how much weight did you lose?
+
+22:32.000 --> 22:33.000
+17 kg.
+
+22:33.000 --> 22:41.000
+He lost 17 kg—successful diet!​
+Let’s go, Tray B!
+
+22:41.000 --> 22:51.000
+(LIl Moshpit)​
+He’s like a younger brother to me—very cute,​
+but also an amazing rapper.
+
+22:51.000 --> 22:56.000
+We’re looking forward to your performance.
+
+22:56.000 --> 23:10.000
+That was Tray B, our third finalist
+
+23:10.000 --> 23:19.000
+Now, the fourth finalist.
+
+23:19.000 --> 23:24.000
+Hello, I’m Nowimyoung.
+
+23:24.000 --> 23:40.000
+(rap)​
+Watch and learn from me—​
+If you're going to copy my style, do it properly.
+
+23:40.000 --> 23:54.000
+He feels like a strong contender—very unpredictable.
+
+23:54.000 --> 24:07.000
+I’m going in with the mindset that I’ve already won.​
+I’ll enjoy it without regrets.
+
+24:07.000 --> 24:18.000
+Showing a distinct identity of their own—
+
+24:18.000 --> 24:29.000
+Your fourth finalist: Nowaimyoung of Team J-Tong & Huhkey.
+
+24:29.000 --> 24:34.000
+From the main rounds,​
+he’s the only member who survived to the final.
+
+24:34.000 --> 24:44.000
+Please share your thoughts and praise your team members.
+
+24:44.000 --> 24:54.000
+(Producer)​
+He’s shown great performances all season,​
+and I believe he’ll finish strong.
+
+24:54.000 --> 25:09.000
+(Producer)​
+He has a really admirable attitude toward music.​
+You worked hard preparing for the final—​
+let’s win if we can.
+
+25:09.000 --> 25:30.000
+That was Nowimyoung, our fourth finalist.
+
+25:30.000 --> 25:40.000
+Finally, the fifth finalist.
+
+25:40.000 --> 25:42.000
+Hello, I’m Kim Haon.
+
+25:42.000 --> 25:49.000
+He’s already very well-known,​
+so he naturally became a hot topic.
+
+25:49.000 --> 25:53.000
+Some people wondered why he chose such a difficult path.
+
+25:53.000 --> 25:57.000
+But I came because there’s something I want to say.
+
+25:57.000 --> 26:12.000
+–26:10 (rap)​
+I don’t forget what I’ve taken in—​
+I keep pushing forward​
+Train, repeat, sharpen my skills​
+Hip-hop isn’t about anything else—​
+it’s about ability
+
+26:12.000 --> 26:16.000
+I want to prove​
+that I’m someone who can keep rising.
+
+26:16.000 --> 26:28.000
+Let’s fight it out properly.
+
+26:28.000 --> 26:33.000
+Creating flawless, high-quality performances—
+
+26:33.000 --> 26:40.000
+Kim Haon of Team Zico & Crush.
+
+26:40.000 --> 26:49.000
+Your fifth finalist: Kim Haon!
+
+26:49.000 --> 26:54.000
+Producers Zico and Crush,​
+this is the final—your determination must be different.
+
+26:54.000 --> 27:00.000
+Please share your thoughts and praise Haon.
+
+27:00.000 --> 27:08.000
+(Zico)​
+Honestly, this is just really fun.​
+Being here in the final with everyone—​
+it feels meaningful and exciting.
+
+27:08.000 --> 27:15.000
+From the moment we first worked together,​
+I had this vague sense of belief in him.
+
+27:15.000 --> 27:24.000
+I think today we’ll finally see that belief come true.
+
+27:24.000 --> 27:31.000
+(Crush)​
+Haon, let’s win.
+
+27:31.000 --> 27:36.000
+Let’s see if that becomes reality.
+
+27:36.000 --> 27:40.000
+Please prove it on stage today.
+
+27:40.000 --> 27:55.000
+That was Kim Haon, our fifth finalist.
+
+27:55.000 --> 28:01.000
+Live on Show Me The Money,​
+the five finalists you just met​
+will soon face their final battle.
+
+28:01.000 --> 28:08.000
+Who will become the new icon of hip-hop?
+
+28:08.000 --> 28:14.000
+Let’s shout it together—
+
+28:14.000 --> 28:32.000
+Show Me The Money!​
+Isn’t he way too handsome? Tray B.
+
+28:32.000 --> 28:35.000
+Thank you, hyung.
+
+28:35.000 --> 28:36.000
+No way.
+
+28:36.000 --> 28:43.000
+Hey, don’t compare him like that—he’s cool.
+
+28:43.000 --> 28:44.000
+Wow.
+
+28:44.000 --> 28:46.000
+Oh my god, Thailand team.
+
+28:46.000 --> 28:51.000
+Oh my god, oh my god.
+
+28:51.000 --> 28:53.000
+Makeup.
+
+28:53.000 --> 28:54.000
+Hmm.
+Let’s go eat now.
+
+28:54.000 --> 28:59.000
+I’m hungry.
+
+28:59.000 --> 29:05.000
+Hey, this is really good.
+
+29:05.000 --> 29:06.000
+Hurry, it’s getting cold.
+
+29:06.000 --> 29:08.000
+Looks delicious.
+
+29:08.000 --> 29:15.000
+Let’s start.
+
+29:15.000 --> 29:17.000
+Thanks for the meal.
+
+29:17.000 --> 29:18.000
+Yeah.
+
+29:18.000 --> 29:21.000
+Did you all see that question that came up?
+
+29:21.000 --> 29:29.000
+Yes, something the viewers were curious about.
+
+29:29.000 --> 29:30.000
+Hello?
+
+29:30.000 --> 29:34.000
+Yes.
+During the semifinals,​
+what advice from E SENS left the biggest impression on you?
+
+29:34.000 --> 29:39.000
+He talked about eye contact on stage—​
+looking at people one by one​
+and creating a kind of wave.
+
+29:39.000 --> 29:49.000
+I think I learned a more MC-like presence from that.
+
+29:49.000 --> 29:50.000
+And you—
+
+29:50.000 --> 29:54.000
+Do you really take lettuce out of hamburgers?
+
+29:54.000 --> 29:56.000
+Yeah, I do.
+
+29:56.000 --> 30:00.000
+Seriously?
+
+30:00.000 --> 30:03.000
+I actually ask for it without lettuce.
+–30:02​
+But recently, I had tacos…​
+and it wasn’t bad.
+
+30:03.000 --> 30:05.000
+Now when I eat tacos, I don’t take it out anymore.
+
+30:05.000 --> 30:07.000
+You’ve grown, huh?
+
+30:07.000 --> 30:11.000
+Yeah.
+Hip-hop is style… and skill.
+
+30:11.000 --> 30:15.000
+But if you’ve got style, your skills look better—
+
+30:15.000 --> 30:16.000
+Right.
+
+30:16.000 --> 30:18.000
+—and if your skills are good, you look stylish.
+
+30:18.000 --> 30:19.000
+That was a good answer.
+
+30:19.000 --> 30:21.000
+Alright, Mason—
+
+30:21.000 --> 30:26.000
+Yes.
+How does it feel to be the last survivor of Okasian?
+
+30:26.000 --> 30:29.000
+People talk about “rap gods” and all that,​
+but in the end, I think the one who remains is the strongest.
+
+30:29.000 --> 30:30.000
+Right.
+
+30:30.000 --> 30:36.000
+So naturally… the Okasian rankings are settled now.
+
+30:36.000 --> 30:38.000
+Next, Milli—
+
+30:38.000 --> 30:44.000
+Milli.
+You box regularly, right?​
+Out of the Top 5, who do you think you could beat?
+
+30:44.000 --> 30:45.000
+Hmm…
+
+30:45.000 --> 31:11.000
+Someone I could beat…
+
+31:11.000 --> 31:12.000
+Just kidding.
+
+31:12.000 --> 31:17.000
+We’ve got a group question too.​
+Which verse this season is your favorite?
+
+31:17.000 --> 31:27.000
+For me, in the semifinals—“One to the Next,” verse 2—​
+that was the only time I used auto-tune this season,​
+and I really liked that part.
+
+31:27.000 --> 31:31.000
+Yeah, I liked that too. It was used perfectly.
+
+31:31.000 --> 31:32.000
+For me, the 2nd 60-second mission—
+
+31:32.000 --> 31:36.000
+Same, I really liked that one.
+
+31:36.000 --> 31:37.000
+Can’t help it.
+
+31:37.000 --> 31:40.000
+It was cool.
+
+31:40.000 --> 31:44.000
+The line “Don’t get intimidated—just focus and don’t look away” from Animal—
+
+31:44.000 --> 31:45.000
+Ah—
+
+31:45.000 --> 31:49.000
+After talking with E SENS for a long time,​
+that was the one line he said to me.
+
+31:49.000 --> 31:54.000
+Since it really captured who I am,​
+it stuck with me.
+
+31:54.000 --> 32:00.000
+For me, I like the “Bbaesseo” hook.
+
+32:00.000 --> 32:02.000
+Honestly, it came out in like 3 seconds.
+
+32:02.000 --> 32:05.000
+I heard the beat and went, “Bbaesseo, bbaesseo—​
+yeah, that’s good. Let’s go with that.”
+
+32:05.000 --> 32:06.000
+Yeah.
+
+32:06.000 --> 32:21.000
+And in the end, that helped me get here,​
+so I like it.
+
+32:21.000 --> 32:27.000
+If we’ve made it all the way to the final,​
+it means we all earned it with great stages.
+
+32:27.000 --> 32:31.000
+Let’s finish strong till the end.
+
+32:31.000 --> 32:34.000
+One, two, three—fighting!
+
+32:34.000 --> 32:43.000
+– 35:52 (MC explanation + voting)
+Show Me The Money 12 Final is now live.
+
+32:43.000 --> 32:48.000
+The current time is 9:52 PM.
+
+32:48.000 --> 32:53.000
+Now, we’ll officially begin the final stage​
+with the Top 5 competing for the 100 million won prize.
+
+32:53.000 --> 33:05.000
+First, we’d like to inform you that​
+today’s final performances and audience evaluations​
+were pre-recorded.
+
+33:05.000 --> 33:09.000
+Here’s how the final works:
+
+33:09.000 --> 33:15.000
+Each of the five rappers will perform a solo stage,
+
+33:15.000 --> 33:21.000
+and the rapper who earns the highest total amount from votes​
+will win the final prize of 100 million won.
+
+33:21.000 --> 33:30.000
+To help your favorite rapper win,​
+your votes are very important.
+
+33:30.000 --> 33:35.000
+Here’s how voting works:
+
+33:35.000 --> 33:41.000
+We already have pre-voting results from the Mnet Plus app​
+and on-site audience evaluations.
+
+33:41.000 --> 33:46.000
+During the live broadcast,​
+you can vote through:
+
+33:46.000 --> 33:52.000
+– Real-time Mnet Plus app voting​
+– Real-time text voting
+
+33:52.000 --> 34:16.000
+The final result will combine all four vote types​
+and convert them into a total score.
+
+34:16.000 --> 34:27.000
+Now, we’ll reveal the pre-voting results​
+from the Mnet Plus app.
+
+34:27.000 --> 34:33.000
+Voting was open for 6 days after the semifinals,
+
+34:33.000 --> 34:47.000
+with participation from 172 regions worldwide.
+
+34:47.000 --> 35:31.000
+Here are the Top 5 rankings based on global votes.
+
+35:31.000 --> 35:52.000
+5th — Tray B​
+4th — Mason Home​
+3rd — Nowimyoung​
+2nd —Kim Haon​
+1st — Milli
+
+35:52.000 --> 36:08.000
+Congratulations to Milli for ranking first.
+
+36:08.000 --> 36:13.000
+However, this ranking is based only on pre-votes.
+
+36:13.000 --> 37:00.000
+With higher-weight votes still remaining,​
+the final result can change.
+
+37:00.000 --> 38:00.000
+Here are the voting numbers:
+1 — Mason Home​
+2 — Milli​
+3 — Tray B​
+4 — Nowimyoung​
+5 — Kim Haon
+
+38:04.000 --> 38:09.000
+App voting is free,
+
+38:09.000 --> 38:13.000
+text voting costs 100 won per message,
+
+38:13.000 --> 38:51.000
+and all proceeds will be donated​
+to support music and indie artists.
+
+38:51.000 --> 38:57.000
+Hello everyone! Did you miss me?
+
+38:57.000 --> 39:01.000
+I missed you, so I’m back!
+
+39:01.000 --> 39:08.000
+I’m here to explain how to vote.
+
+39:08.000 --> 39:12.000
+There are two ways you can vote right now:
+
+39:12.000 --> 39:36.000
+First — Mnet Plus app voting​
+(steps explained…)
+
+39:36.000 --> 39:47.000
+Second — text voting​
+Send a message to #0012​
+with the rapper’s name.
+
+39:47.000 --> 40:02.000
+You can vote for multiple rappers,​
+but not more than once for the same person.
+
+40:02.000 --> 40:07.000
+Make sure to send either the name, number,​
+or both.
+
+40:07.000 --> 40:11.000
+Voting is open during the live broadcast.
+
+40:11.000 --> 40:27.000
+The winner is decided by combining all votes.
+
+40:27.000 --> 41:03.000
+And don’t text my name, okay?
+😄
+
+41:03.000 --> 41:51.000
+Final voting has now begun.
+
+41:51.000 --> 42:02.000
+Let’s begin the final performances.
+
+42:02.000 --> 42:10.000
+The first performer:
+
+42:10.000 --> 42:25.000
+Mason Home from Team Gray & Loco.
+
+42:25.000 --> 42:31.000
+With his unique style and determination,​
+he proved himself every round.
+
+42:31.000 --> 42:57.000
+Now he stands on the final stage.
+
+42:57.000 --> 43:10.000
+Eat whatever you want for the final.
+
+43:10.000 --> 43:12.000
+This is good.
+
+43:12.000 --> 43:26.000
+Today I came to the sauna with my longtime friends​
+to relax before the final.
+
+43:26.000 --> 43:38.000
+He helped us perform when we had nothing—​
+he basically built Okasian’s career.
+
+43:38.000 --> 43:49.000
+We once recorded all night…​
+and forgot to save it.
+
+43:49.000 --> 44:03.000
+They’re people I’m really comfortable with.
+
+44:03.000 --> 44:11.000
+Seeing my polished self on TV feels strange.
+
+44:11.000 --> 44:21.000
+If I overcome this too,​
+maybe I deserve to win.
+
+44:21.000 --> 44:28.000
+I’ll show how someone who came from hell wins.
+
+44:28.000 --> 45:06.000
+I really want this.
+
+45:06.000 --> 45:15.000
+For the final, I wanted to talk about Okasian—​
+our journey together.
+
+45:15.000 --> 46:00.000
+Even though I’m alone on stage,​
+this is still Okasian’s final.
+
+46:00.000 --> 46:08.000
+I kept climbing… and now I’m here.
+
+46:08.000 --> 46:24.000
+They took an unknown artist like me​
+and made me into this.
+
+46:24.000 --> 46:37.000
+I think of myself as someone who keeps surviving.
+
+46:37.000 --> 47:06.000
+This song represents a new beginning.
+
+47:06.000 --> 47:22.000
+Every round, I’ve tried something new.
+
+47:22.000 --> 47:39.000
+So in the final,​
+I’ll show another new side.
+
+47:39.000 --> 47:43.000
+I’ll do my best. Thank you.
+
+47:43.000 --> 47:50.000
+Thanks to you all, my hobby became my job.
+
+47:50.000 --> 47:53.000
+Why did you join Show Me The Money?
+
+47:53.000 --> 48:02.000
+I wanted to turn music into my career.
+
+48:02.000 --> 48:12.000
+Now it finally feels like a real job.
+
+48:12.000 --> 48:17.000
+Starting today, I’ll act like a winner.
+
+48:17.000 --> 49:17.000
+Then maybe I’ll actually become one.
+
+53:27.000 --> 54:16.000
+That was Mason Home’s performance.
+
+54:16.000 --> 54:28.000
+Audience voting is now closed.
+
+54:28.000 --> 54:47.000
+But app and text voting are still open.
+
+54:47.000 --> 54:52.000
+How do you feel after your final stage?
+
+54:52.000 --> 55:05.000
+No regrets.
+
+55:05.000 --> 55:09.000
+Who comes to mind right now?
+
+55:09.000 --> 55:46.000
+My Okasian members…​
+and my mom.
+
+55:46.000 --> 56:01.000
+Next performer:
+
+56:01.000 --> 56:06.000
+Milli from Team Gray & Loco.
+
+56:06.000 --> 56:11.000
+With explosive stage presence and performance,
+
+56:11.000 --> 56:24.000
+she made it to the final.
+
+56:24.000 --> 56:35.000
+Now, please welcome Milli.
+
+56:35.000 --> 56:43.000
+I’m Milli, ranked 5th in the Show Me The Money 12 semifinals.
+
+56:43.000 --> 56:53.000
+Wow… I made the Top 5—number 5.​
+When I made it, I realized how much I’ve changed.​
+I did it.
+
+56:53.000 --> 57:16.000
+If I didn’t have the people around me,​
+if I didn’t have my producers—
+
+57:16.000 --> 57:41.000
+we couldn’t have done this.​
+They’re so nice and really understanding.​
+I’m grateful to be with them.
+
+57:41.000 --> 57:44.000
+She already has her own distinct style.
+
+57:44.000 --> 57:49.000
+She’s been really busy,​
+but what’s impressive is—she always delivers.
+
+57:49.000 --> 57:56.000
+You can really see the practice and effort she puts in.
+
+57:56.000 --> 58:01.000
+That effort is admirable—​
+it’s amazing and really cool to see.
+
+58:01.000 --> 58:06.000
+Let’s make her the first global winner of Show Me The Money.
+
+58:06.000 --> 58:13.000
+Let’s go. Fighting!
+Fighting.​
+My schedule is crazy.
+
+58:13.000 --> 58:15.000
+I came back from the semifinal round​
+and started working right away—
+
+58:15.000 --> 58:18.000
+events, performances…
+
+58:18.000 --> 58:38.000
+I even performed in Japan.
+
+58:38.000 --> 58:45.000
+(Thai)​
+“Wow, she’s so pretty.”
+
+58:45.000 --> 58:49.000
+(reacting / chatter)
+
+58:49.000 --> 58:54.000
+Thank you.
+
+58:54.000 --> 59:01.000
+We’re close. Yeah, we’re super close.​
+Sometimes too close.
+
+59:01.000 --> 59:33.000
+–59:33 (Thai)​
+When I told my mom​
+that I was going to compete on a show in Korea,​
+she asked me why.
+Whenever I want to do something,​
+she doesn’t just stop me—​
+she asks why I want to do it.
+
+59:33.000 --> 59:45.000
+–59:45​
+She always says,​
+“If you really want to go, then go.”
+But sometimes she worries—​
+like when I have too much going on.
+
+59:45.000 --> 59:48.000
+–59:54​
+She’ll say,​
+“Then pack your bags, I’ll buy your ticket​
+and book your hotel for you.”
+
+59:48.000 --> 59:54.000
+overlap fixed naturally →​
+But she doesn’t always say “I’m proud of you” directly.
+
+59:54.000 --> 01:00:00.000
+We’re really close,​
+we talk about everything—
+
+01:00:00.000 --> 01:00:03.000
+Still, I want to say thank you​
+to everyone who supports me.
+
+01:00:03.000 --> 01:00:07.000
+She’s really determined, and she’s aiming high
+
+01:00:07.000 --> 01:00:09.000
+As parents, we have to say this
+
+01:00:09.000 --> 01:00:12.000
+We just try to support her
+
+01:00:12.000 --> 01:00:15.000
+as best as we can
+“Call your dad first.”
+
+01:00:15.000 --> 01:00:20.000
+“Hello, Dad?”
+
+01:00:20.000 --> 01:00:22.000
+“Are you free? Yes?”
+
+01:00:22.000 --> 01:00:25.000
+“Pack your bags, we’re going to Korea.”
+
+01:00:25.000 --> 01:00:27.000
+“Why?”
+“Because your daughter made it to the finals—Top 5.”
+
+01:00:27.000 --> 01:00:31.000
+“Let’s go, let’s go! Let’s make history.”
+
+01:00:31.000 --> 01:00:33.000
+“Do you think you’ll win?”
+
+01:00:33.000 --> 01:00:35.000
+“Well, we have to expect that you will.”
+
+01:00:35.000 --> 01:00:37.000
+“Of course.”
+
+01:00:37.000 --> 01:00:41.000
+“You have to go in with energy—give it your all!”
+
+01:00:41.000 --> 01:00:44.000
+“Give it everything! Go!”
+
+01:00:44.000 --> 01:00:47.000
+“I love you, Dad. Bye!”
+
+01:00:47.000 --> 01:00:49.000
+“Bye!”
+They always say, if you want to do something, do it for real.
+
+01:00:49.000 --> 01:00:52.000
+I just have to do my best.
+
+01:00:52.000 --> 01:00:56.000
+I’m super stressed and worried because of this crazy schedule.
+
+01:00:56.000 --> 01:01:02.000
+I might not be 100% ready for the final round.
+
+01:01:02.000 --> 01:01:05.000
+I bring my laptop everywhere.
+
+01:01:05.000 --> 01:01:09.000
+Whenever I’m free, I start working on it.
+
+01:01:09.000 --> 01:01:13.000
+For this final round, I came up with a concept called “MSG.”
+
+01:01:13.000 --> 01:01:20.000
+MSG is like a magic powder that makes your food taste amazing.
+
+01:01:20.000 --> 01:01:29.000
+It’s me.
+
+01:01:29.000 --> 01:01:33.000
+“MSG girl.”
+
+01:01:33.000 --> 01:01:38.000
+MSG can stand for Money, Stage, Glory, Master.
+
+01:01:38.000 --> 01:01:43.000
+I’m still growing.
+
+01:01:43.000 --> 01:01:51.000
+MSG brings the flavor to the top.
+
+01:01:51.000 --> 01:01:54.000
+I think this final round will show the most “Milli” version of me.
+
+01:01:54.000 --> 01:02:03.000
+I’ll put all my energy, power, and breath into this final.
+
+01:02:03.000 --> 01:02:06.000
+This season is mine.
+
+01:02:06.000 --> 01:02:45.000
+I’m going to be number one. I’m going to be the winner.
+(Performance lyrics and chants follow — translated loosely while preserving meaning)
+
+01:02:45.000 --> 01:03:12.000
+MSG, MSG
+
+01:03:12.000 --> 01:03:15.000
+You are so cheesy, what we want
+
+01:03:15.000 --> 01:03:21.000
+I know you need me
+
+01:03:21.000 --> 01:03:28.000
+You might be the best
+
+01:03:28.000 --> 01:04:28.000
+Make it delicious
+
+01:05:58.000 --> 01:06:31.000
+MC: That was the performance of Milli from Team Gray & Loco.
+
+01:06:31.000 --> 01:06:36.000
+We’ll give a moment for those who haven’t voted yet.
+
+01:06:36.000 --> 01:06:41.000
+Please press button number 2 to vote.
+
+01:06:41.000 --> 01:07:16.000
+Voting countdown begins now.
+
+01:07:16.000 --> 01:07:22.000
+Voting has closed.
+
+01:07:22.000 --> 01:07:27.000
+App and text voting are still ongoing.
+
+01:07:27.000 --> 01:07:31.000
+If you liked Milli’s stage, please continue voting.
+
+01:07:31.000 --> 01:07:38.000
+Let’s talk with Milli.
+
+01:07:38.000 --> 01:07:58.000
+How do you feel after your final performance?
+
+01:07:58.000 --> 01:08:02.000
+You must have developed a deep affection for Korea.
+
+01:08:02.000 --> 01:08:06.000
+Whether you win or not, today marks our goodbye.
+
+01:08:06.000 --> 01:08:10.000
+We can feel that bittersweet emotion.
+
+01:08:10.000 --> 01:08:16.000
+Please say a word to your fans.
+
+01:08:16.000 --> 01:08:26.000
+Thank you so much, everyone.
+
+01:08:26.000 --> 01:08:27.000
+Thank you for your love and for welcoming me.`; 
+    // ==========================================
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const video = document.querySelector('#player');
+        const source = 'https://hls-mh.ondemandkorea.com/prod/video_3197708/manifests/playlist_1080p.m3u8';
+        
+        // Convert the pasted text into a virtual file URL
+        const blob = new Blob([mySubtitles], { type: 'text/vtt' });
+        const subtitleUrl = URL.createObjectURL(blob);
+
+        const defaultOptions = {
+            controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'fullscreen'],
+            settings: ['captions', 'quality', 'speed'],
+            captions: { active: true, update: true, language: 'en' }
+        };
+
+        function injectTrack() {
+            const track = document.createElement('track');
+            track.kind = 'captions';
+            track.label = 'English';
+            track.srclang = 'en';
+            track.src = subtitleUrl;
+            track.default = true;
+            video.appendChild(track);
+        }
+
+        if (Hls.isSupported()) {
+            const hls = new Hls();
+            hls.loadSource(source);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                injectTrack(); // Add the pasted subtitles
+                new Plyr(video, defaultOptions);
+            });
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = source;
+            injectTrack();
+            new Plyr(video, defaultOptions);
+        }
+    });
+</script>
+</body>
+</html>
